@@ -1,0 +1,6 @@
+@CosmeticShop_Backend_HostAddress = http://localhost:5114
+
+GET {{CosmeticShop_Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

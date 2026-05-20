@@ -1,0 +1,17 @@
+# React
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+
+# C#
+backend/bin/
+backend/obj/
+backend/.vs/
+backend/*.user
+backend/appsettings.Development.json
+
+# System
+.DS_Store
+Thumbs.db
+.vscode/
