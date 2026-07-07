@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Npgsql;
 using System.Text;
 using System.Text.Json.Serialization;
+using static System.Net.WebRequestMethods;
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
@@ -38,6 +39,7 @@ var allowedOrigins = builder.Configuration["Cors:AllowedOrigins"]
     ?? new[]
     {
         "http://localhost:5173",
+        "https://cindy-beauty-tttn.onrender.com",
         "https://localhost:5173",
         "http://localhost:5174",
         "https://localhost:5174"
