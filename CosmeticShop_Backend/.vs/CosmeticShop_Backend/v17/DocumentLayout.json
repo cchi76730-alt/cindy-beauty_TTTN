@@ -43,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|solutionrelative:cosmeticshop_backend\\controllers\\admin\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260705090024_AddOtp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CosmeticShop_Backend\\Migrations\\20260705090024_AddOtp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|d:\\cindybeauty\\cosmeticshop_backend\\cosmeticshop_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|solutionrelative:cosmeticshop_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -304,6 +300,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|d:\\cindybeauty\\cosmeticshop_backend\\cosmeticshop_backend\\migrations\\20260615083919_addcustomernotifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|solutionrelative:cosmeticshop_backend\\migrations\\20260615083919_addcustomernotifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|d:\\cindybeauty\\cosmeticshop_backend\\cosmeticshop_backend\\migrations\\20260705090024_addotp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80A61E43-9591-484B-B5AB-98633CD7113F}|CosmeticShop_Backend\\CosmeticShop_Backend.csproj|solutionrelative:cosmeticshop_backend\\migrations\\20260705090024_addotp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -329,8 +329,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\DTOs\\ResetPasswordRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T09:19:57.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T09:19:57.116Z"
             },
             {
               "$type": "Document",
@@ -342,8 +341,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\DTOs\\VerifyOtpRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T09:19:35.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T09:19:35.506Z"
             },
             {
               "$type": "Document",
@@ -355,8 +353,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Services\\EmailService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T09:07:50.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T09:07:50.197Z"
             },
             {
               "$type": "Document",
@@ -368,8 +365,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\DTOs\\AdminLoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T08:24:21.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T08:24:21.774Z"
             },
             {
               "$type": "Document",
@@ -381,8 +377,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Program.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAIwF4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T13:41:12.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T13:41:12.68Z"
             },
             {
               "$type": "Document",
@@ -392,7 +387,7 @@
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "CosmeticShop_Backend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwC0AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T14:34:48.797Z",
               "EditorCaption": ""
@@ -407,8 +402,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-13T13:40:30.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T13:40:30.414Z"
             },
             {
               "$type": "Document",
@@ -420,8 +414,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\DTOs\\AdminRegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T08:23:31.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T08:23:31.235Z"
             },
             {
               "$type": "Document",
@@ -433,12 +426,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Services\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T09:07:33.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T09:07:33.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 75,
               "Title": "20260705090024_AddOtp.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260705090024_AddOtp.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260705090024_AddOtp.cs",
@@ -446,12 +438,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Migrations\\20260705090024_AddOtp.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T09:00:24.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T09:00:24.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\User.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\User.cs",
@@ -459,8 +450,7 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Models\\User.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwBQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:30:37.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T14:30:37.291Z"
             },
             {
               "$type": "Document",
@@ -472,12 +462,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Controllers\\Admin\\AdminOrdersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T07:22:05.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T07:22:05.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\LoginRequest.cs",
@@ -485,12 +474,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Models\\LoginRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:34:22.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T14:34:22.532Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "BrandsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\BrandsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\BrandsController.cs",
@@ -498,12 +486,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Controllers\\BrandsController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAADwvwwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T06:03:00.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T06:03:00.15Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Data\\AppDbContext.cs",
@@ -511,12 +498,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAAIwLEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T13:35:57.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T13:35:57.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\OrdersController.cs",
@@ -524,12 +510,11 @@
               "RelativeToolTip": "CosmeticShop_Backend\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAALkAAAAAAAAAAAAIwMMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T08:29:19.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T08:29:19.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "AdminAuthController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminAuthController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminAuthController.cs",
@@ -541,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "CustomerNotification.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\CustomerNotification.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\CustomerNotification.cs",
@@ -553,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 74,
               "Title": "20260615083919_AddCustomerNotifications.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260615083919_AddCustomerNotifications.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260615083919_AddCustomerNotifications.cs",
@@ -565,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "CustomerNotificationsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\CustomerNotificationsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\CustomerNotificationsController.cs",
@@ -577,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Order.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Order.cs",
@@ -589,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Customer.cs",
@@ -601,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "Attendance.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Attendance.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Attendance.cs",
@@ -613,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 71,
               "Title": "20260603073744_AddAttendances.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260603073744_AddAttendances.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260603073744_AddAttendances.cs",
@@ -625,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "AdminAttendanceController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminAttendanceController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminAttendanceController.cs",
@@ -637,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 72,
               "Title": "20260603075651_UpdateCustomerPhoneAndPassword.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260603075651_UpdateCustomerPhoneAndPassword.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260603075651_UpdateCustomerPhoneAndPassword.cs",
@@ -649,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "AdminNotificationController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminNotificationController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminNotificationController.cs",
@@ -661,7 +646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "ConversationMessage.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\ConversationMessage.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\ConversationMessage.cs",
@@ -673,7 +658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "AdminNotificationRead.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\AdminNotificationRead.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\AdminNotificationRead.cs",
@@ -685,7 +670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "ConversationsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\ConversationsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\ConversationsController.cs",
@@ -697,7 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "AdminMessageController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminMessageController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminMessageController.cs",
@@ -709,7 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "Conversation.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Conversation.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Conversation.cs",
@@ -721,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 73,
               "Title": "20260603070540_AddAdminNotificationReads.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260603070540_AddAdminNotificationReads.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260603070540_AddAdminNotificationReads.cs",
@@ -733,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "AdminProductsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminProductsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminProductsController.cs",
@@ -745,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\ProductsController.cs",
@@ -757,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "AdminInventoryController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminInventoryController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminInventoryController.cs",
@@ -769,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "AdminEmployeesController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminEmployeesController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminEmployeesController.cs",
@@ -781,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "Employee.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Employee.cs",
@@ -793,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "InventoryLog.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\InventoryLog.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\InventoryLog.cs",
@@ -805,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Product.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Product.cs",
@@ -817,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "AdminReviewsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminReviewsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminReviewsController.cs",
@@ -829,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 67,
               "Title": "20260530075845_UpdateAdminMessages.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260530075845_UpdateAdminMessages.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260530075845_UpdateAdminMessages.cs",
@@ -841,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "AdminBrandsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminBrandsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminBrandsController.cs",
@@ -853,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "Brand.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Brand.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Brand.cs",
@@ -865,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 68,
               "Title": "20260530085856_AddConversationChat.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260530085856_AddConversationChat.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260530085856_AddConversationChat.cs",
@@ -877,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "AdminCustomersController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminCustomersController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminCustomersController.cs",
@@ -889,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 69,
               "Title": "20260530074505_AddAdminMessages.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260530074505_AddAdminMessages.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260530074505_AddAdminMessages.cs",
@@ -901,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "AdminMessage.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\AdminMessage.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\AdminMessage.cs",
@@ -913,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "Review.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Review.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Review.cs",
@@ -925,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "AdminUser.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\AdminUser.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\AdminUser.cs",
@@ -937,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 70,
               "Title": "20260528085954_AddOrders.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260528085954_AddOrders.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260528085954_AddOrders.cs",
@@ -949,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 44,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\ReviewsController.cs",
@@ -961,7 +946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "AdminDashboardController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\Admin\\AdminDashboardController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\Admin\\AdminDashboardController.cs",
@@ -973,7 +958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 43,
               "Title": "OrderDetail.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\OrderDetail.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\OrderDetail.cs",
@@ -985,7 +970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 63,
               "Title": "20260524104502_UpdateAdminUser.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260524104502_UpdateAdminUser.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260524104502_UpdateAdminUser.cs",
@@ -997,7 +982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 64,
               "Title": "20260524082052_AddAdminTable.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260524082052_AddAdminTable.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260524082052_AddAdminTable.cs",
@@ -1009,7 +994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 65,
               "Title": "20260524075005_FixProductCategory.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260524075005_FixProductCategory.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260524075005_FixProductCategory.cs",
@@ -1021,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 45,
               "Title": "BeautyMatchController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\BeautyMatchController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\BeautyMatchController.cs",
@@ -1033,7 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 46,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Category.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Category.cs",
@@ -1045,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 47,
               "Title": "Banner.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Banner.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Banner.cs",
@@ -1057,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 49,
               "Title": "PromotionsController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\PromotionsController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\PromotionsController.cs",
@@ -1069,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 66,
               "Title": "20260523075445_AddBeautyMatchFields.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260523075445_AddBeautyMatchFields.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260523075445_AddBeautyMatchFields.cs",
@@ -1081,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 50,
               "Title": "20260520060935_AddBrandTable.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260520060935_AddBrandTable.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260520060935_AddBrandTable.cs",
@@ -1093,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 51,
               "Title": "20260517123700_AddPromotionTables.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260517123700_AddPromotionTables.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260517123700_AddPromotionTables.cs",
@@ -1105,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 52,
               "Title": "PromotionProduct.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\PromotionProduct.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\PromotionProduct.cs",
@@ -1117,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 53,
               "Title": "Promotion.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Models\\Promotion.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Models\\Promotion.cs",
@@ -1129,7 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 54,
               "Title": "20260517075655_UpdateReviewTable.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260517075655_UpdateReviewTable.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260517075655_UpdateReviewTable.cs",
@@ -1141,7 +1126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 55,
               "Title": "20260517074904_CreateReviews.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260517074904_CreateReviews.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260517074904_CreateReviews.cs",
@@ -1153,7 +1138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 56,
               "Title": "20260517074528_UpdateReviewMedia.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260517074528_UpdateReviewMedia.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260517074528_UpdateReviewMedia.cs",
@@ -1165,7 +1150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 48,
               "Title": "20260517074354_AddReviewMedia.cs",
               "DocumentMoniker": "D:\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260517074354_AddReviewMedia.cs",
               "RelativeDocumentMoniker": "..\\..\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260517074354_AddReviewMedia.cs",
@@ -1177,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 57,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Controllers\\CategoriesController.cs",
@@ -1189,7 +1174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 58,
               "Title": "20260516162117_UpdateProductTable.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260516162117_UpdateProductTable.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260516162117_UpdateProductTable.cs",
@@ -1201,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 59,
               "Title": "20260515143536_AddUsersTable.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260515143536_AddUsersTable.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260515143536_AddUsersTable.cs",
@@ -1213,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 60,
               "Title": "20260515112533_Init.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260515112533_Init.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260515112533_Init.cs",
@@ -1225,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 61,
               "Title": "20260515110544_AddCategoryIdToProduct.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260515110544_AddCategoryIdToProduct.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260515110544_AddCategoryIdToProduct.cs",
@@ -1237,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 62,
               "Title": "20260513134341_InitialCreate.cs",
               "DocumentMoniker": "D:\\Cindybeauty\\CosmeticShop_Backend\\CosmeticShop_Backend\\Migrations\\20260513134341_InitialCreate.cs",
               "RelativeDocumentMoniker": "CosmeticShop_Backend\\Migrations\\20260513134341_InitialCreate.cs",

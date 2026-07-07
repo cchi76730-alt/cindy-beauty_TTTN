@@ -36,3 +36,6 @@ wwwroot\images\d15c9879-a1a0-490f-875a-392a762b9c9e.png
 wwwroot\images\232ae4fc-c7aa-42fe-bf0c-5b3b2cf76868.png
 wwwroot\images\0f003652-96c5-4e67-9902-b06ae3128f59.png
 wwwroot\images\sale.jpg
+wwwroot\images\e5bf7d78-2fbb-4dd7-98e4-c30b9cbfad6e.png
+wwwroot\images\cdb416aa-10d0-45ca-beaa-f2950ebb40f3.webp
+wwwroot\images\c2db06ca-90bc-40fc-b56d-f1c07b784536.webp
