@@ -8,6 +8,20 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var jwtKey = builder.Configuration["Jwt:Key"]
+    ?? "THIS_IS_MY_SUPER_SECRET_KEY_123456789_ABCDEFG";
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "CosmeticShop";
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "CosmeticShop";
+var allowedOrigins = builder.Configuration["Cors:AllowedOrigins"]
+    ?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    ?? new[]
+    {
+        "http://localhost:5173",
+        "https://localhost:5173",
+        "http://localhost:5174",
+        "https://localhost:5174"
+    };
+
 // DATABASE
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
@@ -20,12 +34,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:5173",
-                "https://localhost:5173",
-                "http://localhost:5174",
-                "https://localhost:5174"
-            )
+        policy.WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -44,14 +53,12 @@ builder.Services
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
 
-            ValidIssuer = "CosmeticShop",
-            ValidAudience = "CosmeticShop",
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
 
             IssuerSigningKey =
                 new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(
-                        "THIS_IS_MY_SUPER_SECRET_KEY_123456789_ABCDEFG"
-                    )
+                    Encoding.UTF8.GetBytes(jwtKey)
                 )
         };
 });
@@ -82,7 +89,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseStaticFiles();
 
 app.UseCors("AllowReact");

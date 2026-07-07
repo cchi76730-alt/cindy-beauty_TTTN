@@ -17,14 +17,14 @@ namespace CosmeticShop_Backend.Controllers.Admin
     public class AdminAuthController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        // JWT SECRET
-        private const string SECRET_KEY =
-            "THIS_IS_MY_SUPER_SECRET_KEY_123456789_ABCDEFG";
-
-        public AdminAuthController(AppDbContext context)
+        public AdminAuthController(
+            AppDbContext context,
+            IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         // ================= REGISTER =================
@@ -113,6 +113,11 @@ namespace CosmeticShop_Backend.Controllers.Admin
 
         private string GenerateToken(string email, string role)
         {
+            var jwtKey = _configuration["Jwt:Key"]
+                ?? "THIS_IS_MY_SUPER_SECRET_KEY_123456789_ABCDEFG";
+            var jwtIssuer = _configuration["Jwt:Issuer"] ?? "CosmeticShop";
+            var jwtAudience = _configuration["Jwt:Audience"] ?? "CosmeticShop";
+
             var claims = new[]
             {
         new Claim(ClaimTypes.Name, email),
@@ -120,7 +125,7 @@ namespace CosmeticShop_Backend.Controllers.Admin
     };
 
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(SECRET_KEY)
+                Encoding.UTF8.GetBytes(jwtKey)
             );
 
             var creds = new SigningCredentials(
@@ -129,8 +134,8 @@ namespace CosmeticShop_Backend.Controllers.Admin
             );
 
             var token = new JwtSecurityToken(
-                issuer: "CosmeticShop",
-                audience: "CosmeticShop",
+                issuer: jwtIssuer,
+                audience: jwtAudience,
                 claims: claims,
                 expires: DateTime.Now.AddDays(7),
                 signingCredentials: creds
