@@ -18,30 +18,51 @@ function FlashSalePage() {
         seconds: 19
     });
 
+    // ================= IMAGE =================
+    const getImageSrc = (imageUrl) => {
+
+        if (!imageUrl) {
+            return "/no-image.png";
+        }
+
+        // đã là full url
+        if (imageUrl.startsWith("http")) {
+            return imageUrl;
+        }
+
+        // chỉ là tên file
+        return `https://localhost:7019/images/${imageUrl}`;
+    };
+
     // ================= LOAD PRODUCTS =================
     useEffect(() => {
 
-        fetch("http://localhost:5114/api/Products")
+        fetch("https://localhost:7019/api/Products")
             .then(res => res.json())
             .then(data => {
 
-                // fake flash sale
                 const flashSaleProducts = data.map(item => {
 
-                    const randomDiscount =
-                        Math.floor(Math.random() * 35) + 5;
+                    // nếu backend đã có discount
+                    const discount =
+                        item.discountPercent > 0
+                            ? item.discountPercent
+                            : Math.floor(Math.random() * 35) + 5;
 
                     const finalPrice =
-                        item.price -
-                        (item.price * randomDiscount / 100);
+                        item.finalPrice ||
+                        Math.floor(
+                            item.price -
+                            (item.price * discount / 100)
+                        );
 
                     return {
 
                         ...item,
 
-                        discountPercent: randomDiscount,
+                        discountPercent: discount,
 
-                        finalPrice: Math.floor(finalPrice)
+                        finalPrice: finalPrice
                     };
                 });
 
@@ -257,12 +278,16 @@ function FlashSalePage() {
                                         >
 
                                             <img
-                                                src={`http://localhost:5114/images/${product.imageUrl}`}
+                                                src={getImageSrc(product.imageUrl)}
                                                 alt={product.name}
                                                 style={{
                                                     width: "100%",
                                                     height: "280px",
                                                     objectFit: "contain"
+                                                }}
+                                                onError={(e) => {
+                                                    e.currentTarget.src =
+                                                        "/no-image.png";
                                                 }}
                                             />
 

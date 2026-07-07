@@ -6,6 +6,9 @@ function BrandsPage() {
     const [brands, setBrands] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
+    const fallbackImage =
+        "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23eeeeee'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999999' font-size='32'%3ENo Image%3C/text%3E%3C/svg%3E";
+
     useEffect(() => {
         loadBrands();
     }, []);
@@ -13,23 +16,68 @@ function BrandsPage() {
     const loadBrands = async () => {
         try {
             const result = await getBrands();
-            setBrands(result.data);
+
+            setBrands(result.data || []);
         } catch (error) {
             console.log(error);
         }
     };
 
+    const isValidImageValue = (value) => {
+        return (
+            value &&
+            value !== "null" &&
+            value !== "undefined" &&
+            value.trim() !== ""
+        );
+    };
+
+   const getBrandImage = (brand) => {
+    const imageUrl =
+        isValidImageValue(brand.thumbnailUrl)
+            ? brand.thumbnailUrl
+            : isValidImageValue(brand.logoUrl)
+                ? brand.logoUrl
+                : isValidImageValue(brand.bannerUrl)
+                    ? brand.bannerUrl
+                    : "";
+
+    if (!imageUrl) {
+        return fallbackImage;
+    }
+
+    if (imageUrl.startsWith("http")) {
+        return imageUrl;
+    }
+
+    if (imageUrl.startsWith("/images/")) {
+        return `https://localhost:7019${imageUrl}`;
+    }
+
+    if (imageUrl.startsWith("images/")) {
+        return `https://localhost:7019/${imageUrl}`;
+    }
+
+    if (imageUrl.startsWith("brands/")) {
+        return `https://localhost:7019/images/${imageUrl}`;
+    }
+
+    return `https://localhost:7019/images/brands/${imageUrl}`;
+};
+
     const filteredBrands = brands.filter((brand) =>
-        brand.name.toLowerCase().includes(searchTerm.toLowerCase())
+        brand.name
+            ?.toLowerCase()
+            .includes(searchTerm.toLowerCase())
     );
 
     return (
         <div className="container py-5">
-
             <div
                 className="text-center mb-5 p-5"
                 style={{
-                    background: "linear-gradient(135deg, #fff1f5, #f8f9fa)",
+                    background:
+                        "linear-gradient(135deg, #fff1f5, #f8f9fa)",
                     borderRadius: "24px"
                 }}
             >
@@ -52,7 +100,9 @@ function BrandsPage() {
                             className="form-control form-control-lg rounded-pill px-4"
                             placeholder="Tìm thương hiệu..."
                             value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
+                            onChange={(e) =>
+                                setSearchTerm(e.target.value)
+                            }
                         />
                     </div>
                 </div>
@@ -70,7 +120,10 @@ function BrandsPage() {
 
             <div className="row g-4">
                 {filteredBrands.map((brand) => (
-                    <div className="col-md-6 col-lg-3" key={brand.id}>
+                    <div
+                        className="col-md-6 col-lg-3"
+                        key={brand.id}
+                    >
                         <Link
                             to={`/products?brandId=${brand.id}`}
                             className="text-decoration-none"
@@ -86,19 +139,21 @@ function BrandsPage() {
                                     className="position-relative"
                                     style={{
                                         height: "240px",
-                                        overflow: "hidden"
+                                        overflow: "hidden",
+                                        background: "#f5f5f5"
                                     }}
                                 >
                                     <img
-                                        src={
-                                            brand.bannerUrl
-                                                ? `http://localhost:5114/images/${brand.bannerUrl}`
-                                                : "https://via.placeholder.com/600x400?text=No+Image"
-                                        }
+                                        src={getBrandImage(brand)}
                                         alt={brand.name}
                                         className="w-100 h-100 brand-img"
                                         style={{
                                             objectFit: "cover"
+                                        }}
+                                        onError={(e) => {
+                                            e.currentTarget.onerror = null;
+                                            e.currentTarget.src =
+                                                fallbackImage;
                                         }}
                                     />
 
@@ -108,17 +163,13 @@ function BrandsPage() {
                                             background:
                                                 "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.45))"
                                         }}
-                                    ></div>
+                                    />
 
-                                    <span
-                                        className="position-absolute top-0 end-0 m-3 badge bg-light text-dark px-3 py-2"
-                                    >
-                                        {brand.productCount} SP
+                                    <span className="position-absolute top-0 end-0 m-3 badge bg-light text-dark px-3 py-2">
+                                        {brand.productCount || 0} SP
                                     </span>
 
-                                    <h4
-                                        className="position-absolute bottom-0 start-0 text-white fw-bold m-3"
-                                    >
+                                    <h4 className="position-absolute bottom-0 start-0 text-white fw-bold m-3">
                                         {brand.name}
                                     </h4>
                                 </div>
@@ -130,7 +181,8 @@ function BrandsPage() {
                                             minHeight: "42px"
                                         }}
                                     >
-                                        {brand.description || "Thương hiệu mỹ phẩm được yêu thích tại Cindybeauty Shop."}
+                                        {brand.description ||
+                                            "Thương hiệu mỹ phẩm được yêu thích tại Cindybeauty Shop."}
                                     </p>
 
                                     <div className="btn btn-dark rounded-pill px-4">

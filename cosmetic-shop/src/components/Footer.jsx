@@ -77,6 +77,8 @@ function Footer() {
                                     Liên hệ hỗ trợ
                                 </Link>
                             </li>
+
+                            
                         </ul>
                     </div>
 
@@ -110,7 +112,7 @@ function Footer() {
                             </a>
 
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/mia.hcii_/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="footer-link"

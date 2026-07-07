@@ -23,7 +23,8 @@ namespace CosmeticShop_Backend.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProducts(
             [FromQuery] int? categoryId,
-            [FromQuery] int? brandId)
+            [FromQuery] int? brandId
+        )
         {
             var query = _context.Products
                 .Include(p => p.Category)
@@ -32,12 +33,16 @@ namespace CosmeticShop_Backend.Controllers
 
             if (categoryId.HasValue)
             {
-                query = query.Where(p => p.CategoryId == categoryId.Value);
+                query = query.Where(
+                    p => p.CategoryId == categoryId.Value
+                );
             }
 
             if (brandId.HasValue)
             {
-                query = query.Where(p => p.BrandId == brandId.Value);
+                query = query.Where(
+                    p => p.BrandId == brandId.Value
+                );
             }
 
             var products = await query
@@ -53,6 +58,15 @@ namespace CosmeticShop_Backend.Controllers
                     p.Rating,
                     p.CategoryId,
                     p.BrandId,
+                    p.DiscountPercent,
+                    p.Status,
+                    p.CreatedAt,
+
+                    FinalPrice =
+                        p.Price -
+                        (p.Price * p.DiscountPercent / 100),
+
+                    IsInStock = p.Stock > 0,
 
                     Category = p.Category == null ? null : new
                     {
@@ -93,6 +107,15 @@ namespace CosmeticShop_Backend.Controllers
                     p.Rating,
                     p.CategoryId,
                     p.BrandId,
+                    p.DiscountPercent,
+                    p.Status,
+                    p.CreatedAt,
+
+                    FinalPrice =
+                        p.Price -
+                        (p.Price * p.DiscountPercent / 100),
+
+                    IsInStock = p.Stock > 0,
 
                     Category = p.Category == null ? null : new
                     {
@@ -111,7 +134,9 @@ namespace CosmeticShop_Backend.Controllers
                 .FirstOrDefaultAsync();
 
             if (product == null)
+            {
                 return NotFound();
+            }
 
             return Ok(product);
         }
@@ -121,13 +146,17 @@ namespace CosmeticShop_Backend.Controllers
         public async Task<IActionResult> CreateProduct(Product product)
         {
             if (product.CategoryId <= 0)
+            {
                 return BadRequest("CategoryId không hợp lệ");
+            }
 
             var categoryExists = await _context.Categories
                 .AnyAsync(c => c.Id == product.CategoryId);
 
             if (!categoryExists)
+            {
                 return BadRequest("CategoryId không tồn tại");
+            }
 
             if (product.BrandId.HasValue)
             {
@@ -135,10 +164,15 @@ namespace CosmeticShop_Backend.Controllers
                     .AnyAsync(b => b.Id == product.BrandId.Value);
 
                 if (!brandExists)
+                {
                     return BadRequest("BrandId không tồn tại");
+                }
             }
 
+            product.CreatedAt = DateTime.Now;
+
             _context.Products.Add(product);
+
             await _context.SaveChangesAsync();
 
             return Ok(product);
@@ -146,16 +180,23 @@ namespace CosmeticShop_Backend.Controllers
 
         // PUT: api/products/1
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, Product product)
+        public async Task<IActionResult> UpdateProduct(
+            int id,
+            Product product
+        )
         {
             if (id != product.Id)
-                return BadRequest();
+            {
+                return BadRequest("Id không khớp");
+            }
 
             var categoryExists = await _context.Categories
                 .AnyAsync(c => c.Id == product.CategoryId);
 
             if (!categoryExists)
+            {
                 return BadRequest("CategoryId không tồn tại");
+            }
 
             if (product.BrandId.HasValue)
             {
@@ -163,10 +204,13 @@ namespace CosmeticShop_Backend.Controllers
                     .AnyAsync(b => b.Id == product.BrandId.Value);
 
                 if (!brandExists)
+                {
                     return BadRequest("BrandId không tồn tại");
+                }
             }
 
             _context.Entry(product).State = EntityState.Modified;
+
             await _context.SaveChangesAsync();
 
             return Ok(product);
@@ -179,12 +223,18 @@ namespace CosmeticShop_Backend.Controllers
             var product = await _context.Products.FindAsync(id);
 
             if (product == null)
+            {
                 return NotFound();
+            }
 
             _context.Products.Remove(product);
+
             await _context.SaveChangesAsync();
 
-            return Ok();
+            return Ok(new
+            {
+                message = "Xóa sản phẩm thành công"
+            });
         }
     }
 }

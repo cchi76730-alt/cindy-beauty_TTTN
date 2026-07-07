@@ -1,40 +1,36 @@
 import { createContext, useEffect, useState } from "react";
-
 import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-
-    // ================= LOAD CART FROM LOCALSTORAGE =================
     const [cartItems, setCartItems] = useState(() => {
-
         const savedCart = localStorage.getItem("cart");
-
         return savedCart ? JSON.parse(savedCart) : [];
     });
 
-    // ================= SAVE CART =================
-    useEffect(() => {
+    const notifyCartUpdated = () => {
+        window.dispatchEvent(
+            new Event("cartUpdated")
+        );
+    };
 
+    useEffect(() => {
         localStorage.setItem(
             "cart",
             JSON.stringify(cartItems)
         );
 
+        notifyCartUpdated();
     }, [cartItems]);
 
-    // ================= ADD TO CART =================
     const addToCart = (product, quantity = 1) => {
-
         const existingItem = cartItems.find(
             item => item.id === product.id
         );
 
         if (existingItem) {
-
             const updatedCart = cartItems.map(item =>
-
                 item.id === product.id
                     ? {
                         ...item,
@@ -44,9 +40,7 @@ export function CartProvider({ children }) {
             );
 
             setCartItems(updatedCart);
-
         } else {
-
             setCartItems([
                 ...cartItems,
                 {
@@ -59,11 +53,8 @@ export function CartProvider({ children }) {
         toast.success("Đã thêm vào giỏ hàng!");
     };
 
-    // ================= INCREASE =================
     const increaseQuantity = (id) => {
-
         const updatedCart = cartItems.map(item =>
-
             item.id === id
                 ? {
                     ...item,
@@ -75,11 +66,8 @@ export function CartProvider({ children }) {
         setCartItems(updatedCart);
     };
 
-    // ================= DECREASE =================
     const decreaseQuantity = (id) => {
-
         const updatedCart = cartItems.map(item =>
-
             item.id === id
                 ? {
                     ...item,
@@ -94,9 +82,7 @@ export function CartProvider({ children }) {
         setCartItems(updatedCart);
     };
 
-    // ================= REMOVE =================
     const removeFromCart = (id) => {
-
         const updatedCart = cartItems.filter(
             item => item.id !== id
         );
@@ -106,16 +92,18 @@ export function CartProvider({ children }) {
         toast.success("Đã xóa sản phẩm!");
     };
 
-    // ================= CLEAR CART =================
     const clearCart = () => {
-
         setCartItems([]);
 
-        localStorage.removeItem("cart");
+        localStorage.setItem(
+            "cart",
+            JSON.stringify([])
+        );
+
+        notifyCartUpdated();
     };
 
     return (
-
         <CartContext.Provider
             value={{
                 cartItems,

@@ -7,7 +7,7 @@ function PromotionPage() {
 
   useEffect(() => {
 
-    fetch("http://localhost:5114/api/Promotions")
+    fetch("https://localhost:7019/api/Promotions")
       .then(res => res.json())
       .then(data => setPromotions(data))
       .catch(err => console.log(err));

@@ -7,7 +7,7 @@ function PromotionDetailPage() {
   const [promotion, setPromotion] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5114/api/Promotions/${id}`)
+    fetch(`https://localhost:7019/api/Promotions/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Không tìm thấy khuyến mãi");
@@ -206,7 +206,7 @@ function PromotionDetailPage() {
                     }}
                   >
                     <img
-                      src={`http://localhost:5114/images/${product.imageUrl}`}
+                      src={`https://localhost:7019/images/${product.imageUrl}`}
                       alt={product.name}
                       style={{
                         width: "100%",

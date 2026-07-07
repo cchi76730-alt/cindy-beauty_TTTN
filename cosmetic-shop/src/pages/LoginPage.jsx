@@ -1,31 +1,21 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage({
   onClose,
   onLoginSuccess,
 }) {
+
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("login");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // ===== FORGOT PASSWORD =====
-  const [showForgot, setShowForgot] = useState(false);
 
-  const [step, setStep] = useState(1);
-
-  const [generatedOtp, setGeneratedOtp] = useState("");
-
-  const [forgotData, setForgotData] = useState({
-    phone: "",
-    otp: "",
-    newPassword: "",
-  });
-
-  // ===== LOGIN STATE =====
   const [loginData, setLoginData] = useState({
     identifier: "",
     password: "",
   });
 
-  // ===== REGISTER STATE =====
   const [registerData, setRegisterData] = useState({
     fullName: "",
     phone: "",
@@ -39,125 +29,142 @@ export default function LoginPage({
     agreeTerms: false,
   });
 
-  
+  const handleLoginSubmit = async (e) => {
+    e.preventDefault();
 
-  // ===== LOGIN =====
-const handleLoginSubmit = async (e) => {
-  e.preventDefault();
+    const identifier = loginData.identifier.trim();
+    const password = loginData.password.trim();
 
-  try {
-    const response = await fetch(
-      "http://localhost:5114/api/Auth/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-  identifier: loginData.identifier,
-  password: loginData.password,
-}),
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      alert(data.message || "Sai tài khoản hoặc mật khẩu");
+    if (!identifier || !password) {
+      alert("Vui lòng nhập đầy đủ email/số điện thoại và mật khẩu");
       return;
     }
 
-    // lưu user đang đăng nhập
-    localStorage.setItem(
-  "currentUser",
-  JSON.stringify(data.user)
-);
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    localStorage.setItem("isLoggedIn", "true");
+    try {
+      const response = await fetch(
+        "https://localhost:7019/api/Auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            identifier,
+            password,
+          }),
+        }
+      );
 
-    alert("Đăng nhập thành công");
+      const data = await response.json();
 
-    if (onLoginSuccess) {
-      onLoginSuccess(data.user);
-    }
-
-    if (onClose) {
-  onClose();
-}
-  } catch (error) {
-    console.error(error);
-
-    alert("Không kết nối được server");
-  }
-};
-
-  // ===== REGISTER =====
-const handleRegisterSubmit = async (e) => {
-  e.preventDefault();
-
-  if (!registerData.agreeTerms) {
-    alert("Bạn cần đồng ý với điều khoản sử dụng!");
-    return;
-  }
-
-  try {
-    const response = await fetch(
-      "http://localhost:5114/api/Auth/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName: registerData.fullName,
-          phone: registerData.phone,
-          email: registerData.email,
-          password: registerData.password,
-          gender: registerData.gender,
-          year: registerData.year,
-          month: registerData.month,
-          day: registerData.day,
-        }),
+      if (!response.ok) {
+        alert(data.message || "Sai tài khoản hoặc mật khẩu");
+        return;
       }
-    );
 
-    const data = await response.json();
+      localStorage.setItem("currentUser", JSON.stringify(data.user));
+      localStorage.setItem("isLoggedIn", "true");
 
-    if (!response.ok) {
-      alert(data.message || "Đăng ký thất bại");
+      alert("Đăng nhập thành công");
+
+      if (onLoginSuccess) {
+        onLoginSuccess(data.user);
+      }
+
+      if (onClose) {
+        onClose();
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Không kết nối được server");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleRegisterSubmit = async (e) => {
+    e.preventDefault();
+
+    const fullName = registerData.fullName.trim();
+    const phone = registerData.phone.trim();
+    const email = registerData.email.trim().toLowerCase();
+    const password = registerData.password.trim();
+
+    if (!fullName || !phone || !email || !password) {
+      alert("Vui lòng điền đầy đủ các trường bắt buộc (*)");
       return;
     }
 
-    alert("Đăng ký thành công");
+    if (password.length < 6 || password.length > 32) {
+      alert("Mật khẩu phải từ 6 đến 32 ký tự");
+      return;
+    }
 
-    // chuyển sang login
-    setActiveTab("login");
+    if (!registerData.agreeTerms) {
+      alert("Bạn cần đồng ý với điều khoản sử dụng!");
+      return;
+    }
 
-    // tự điền email
-    setLoginData({
-      identifier: registerData.email,
-      password: "",
-    });
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    // reset form
-    setRegisterData({
-      fullName: "",
-      phone: "",
-      email: "",
-      password: "",
-      gender: "male",
-      year: "",
-      month: "",
-      day: "",
-      receiveEmail: false,
-      agreeTerms: false,
-    });
-  } catch (error) {
-    console.error(error);
+    try {
+      const response = await fetch(
+        "https://localhost:7019/api/Auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            phone,
+            email,
+            password,
+            gender: registerData.gender,
+          }),
+        }
+      );
 
-    alert("Không kết nối được server");
-  }
-};
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message || "Đăng ký thất bại");
+        return;
+      }
+
+      alert("Đăng ký thành công");
+
+      setActiveTab("login");
+
+      setLoginData({
+        identifier: email,
+        password: "",
+      });
+
+      setRegisterData({
+        fullName: "",
+        phone: "",
+        email: "",
+        password: "",
+        gender: "male",
+        year: "",
+        month: "",
+        day: "",
+        receiveEmail: false,
+        agreeTerms: false,
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Không kết nối được server");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   const years = Array.from(
     { length: 100 },
@@ -170,50 +177,48 @@ const handleRegisterSubmit = async (e) => {
 
   return (
     <div
-  style={styles.overlay}
-  onClick={() => onClose && onClose()}
->
-      <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
-        {/* Close */}
+      style={styles.overlay}
+      onClick={() => onClose && onClose()}
+    >
+      <div
+        style={styles.modal}
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
-  style={styles.closeBtn}
-  onClick={() => onClose && onClose()}
->
+          style={styles.closeBtn}
+          onClick={() => onClose && onClose()}
+        >
           ✕
         </button>
 
-        {/* Tabs */}
-        {!showForgot && (
-          <div style={styles.tabs}>
-            <button
-              style={{
-                ...styles.tab,
-                ...(activeTab === "login"
-                  ? styles.tabActive
-                  : styles.tabInactive),
-              }}
-              onClick={() => setActiveTab("login")}
-            >
-              ĐĂNG NHẬP
-            </button>
+        <div style={styles.tabs}>
+          <button
+            style={{
+              ...styles.tab,
+              ...(activeTab === "login"
+                ? styles.tabActive
+                : styles.tabInactive),
+            }}
+            onClick={() => setActiveTab("login")}
+          >
+            ĐĂNG NHẬP
+          </button>
 
-            <button
-              style={{
-                ...styles.tab,
-                ...(activeTab === "register"
-                  ? styles.tabActive
-                  : styles.tabInactive),
-              }}
-              onClick={() => setActiveTab("register")}
-            >
-              TẠO TÀI KHOẢN
-            </button>
-          </div>
-        )}
+          <button
+            style={{
+              ...styles.tab,
+              ...(activeTab === "register"
+                ? styles.tabActive
+                : styles.tabInactive),
+            }}
+            onClick={() => setActiveTab("register")}
+          >
+            TẠO TÀI KHOẢN
+          </button>
+        </div>
 
-        {/* ===== LOGIN ===== */}
-        {activeTab === "login" && !showForgot && (
-          <div style={styles.formContainer}>
+        {activeTab === "login" && (
+          <form style={styles.formContainer} onSubmit={handleLoginSubmit}>
             <input
               style={styles.input}
               type="text"
@@ -244,210 +249,28 @@ const handleRegisterSubmit = async (e) => {
               Quên mật khẩu? Nhấn vào{" "}
               <span
                 style={styles.link}
-                onClick={() => {
-                  setShowForgot(true);
-                  setStep(1);
-                }}
+                onClick={() => navigate("/forgot-password")}
               >
                 đây
               </span>
             </p>
 
             <button
-              style={styles.submitBtn}
-              onClick={handleLoginSubmit}
+              style={{
+                ...styles.submitBtn,
+                ...(isSubmitting ? styles.submitBtnDisabled : {}),
+              }}
+              type="submit"
+              disabled={isSubmitting}
             >
-              Đăng nhập
+              {isSubmitting ? "Đang xử lý..." : "Đăng nhập"}
             </button>
-          </div>
+          </form>
         )}
 
-        {/* ===== FORGOT PASSWORD ===== */}
-        {activeTab === "login" && showForgot && (
-          <div style={styles.formContainer}>
-            <div style={styles.forgotBox}>
-              <h3 style={styles.forgotTitle}>
-                Quên mật khẩu
-              </h3>
 
-              {/* STEP 1 */}
-              {step === 1 && (
-                <>
-                  <input
-                    style={styles.input}
-                    type="tel"
-                    placeholder="Nhập số điện thoại"
-                    value={forgotData.phone}
-                    onChange={(e) =>
-                      setForgotData({
-                        ...forgotData,
-                        phone: e.target.value,
-                      })
-                    }
-                  />
-
-                  <button
-                    style={styles.submitBtn}
-                    onClick={() => {
-                      const users =
-                        JSON.parse(
-                          localStorage.getItem("users")
-                        ) || [];
-
-                      const foundUser = users.find(
-                        (user) =>
-                          user.phone === forgotData.phone
-                      );
-
-                      if (!foundUser) {
-                        alert(
-                          "Số điện thoại chưa đăng ký"
-                        );
-                        return;
-                      }
-
-                      const otp = Math.floor(
-                        100000 +
-                          Math.random() * 900000
-                      ).toString();
-
-                      setGeneratedOtp(otp);
-
-                      alert("Mã OTP: " + otp);
-
-                      setStep(2);
-                    }}
-                  >
-                    Gửi mã OTP
-                  </button>
-                </>
-              )}
-
-              {/* STEP 2 */}
-              {step === 2 && (
-                <>
-                  <input
-                    style={styles.input}
-                    type="text"
-                    placeholder="Nhập mã OTP"
-                    value={forgotData.otp}
-                    onChange={(e) =>
-                      setForgotData({
-                        ...forgotData,
-                        otp: e.target.value,
-                      })
-                    }
-                  />
-
-                  <button
-                    style={styles.submitBtn}
-                    onClick={() => {
-                      if (
-                        forgotData.otp === generatedOtp
-                      ) {
-                        alert("OTP chính xác");
-                        setStep(3);
-                      } else {
-                        alert("OTP không đúng");
-                      }
-                    }}
-                  >
-                    Xác nhận OTP
-                  </button>
-                </>
-              )}
-
-              {/* STEP 3 */}
-              {step === 3 && (
-                <>
-                  <input
-                    style={styles.input}
-                    type="password"
-                    placeholder="Nhập mật khẩu mới"
-                    value={forgotData.newPassword}
-                    onChange={(e) =>
-                      setForgotData({
-                        ...forgotData,
-                        newPassword: e.target.value,
-                      })
-                    }
-                  />
-
-                  <button
-                    style={styles.submitBtn}
-                    onClick={() => {
-                      if (
-                        forgotData.newPassword.length < 6
-                      ) {
-                        alert(
-                          "Mật khẩu phải từ 6 ký tự"
-                        );
-                        return;
-                      }
-
-                      const users =
-                        JSON.parse(
-                          localStorage.getItem("users")
-                        ) || [];
-
-                      const updatedUsers = users.map(
-                        (user) => {
-                          if (
-                            user.phone ===
-                            forgotData.phone
-                          ) {
-                            return {
-                              ...user,
-                              password:
-                                forgotData.newPassword,
-                            };
-                          }
-
-                          return user;
-                        }
-                      );
-
-                      localStorage.setItem(
-                        "users",
-                        JSON.stringify(updatedUsers)
-                      );
-
-                      alert(
-                        "Đổi mật khẩu thành công"
-                      );
-
-                      setShowForgot(false);
-
-                      setForgotData({
-                        phone: "",
-                        otp: "",
-                        newPassword: "",
-                      });
-
-                      setStep(1);
-                    }}
-                  >
-                    Đổi mật khẩu
-                  </button>
-                </>
-              )}
-
-              <p
-                style={styles.backLogin}
-                onClick={() => {
-                  setShowForgot(false);
-                  setStep(1);
-                }}
-              >
-                ← Quay lại đăng nhập
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* ===== REGISTER ===== */}
-        {activeTab === "register" && !showForgot && (
-          <div style={styles.formContainer}>
+        {activeTab === "register" && (
+          <form style={styles.formContainer} onSubmit={handleRegisterSubmit}>
             <input
               style={styles.input}
               type="text"
@@ -500,7 +323,6 @@ const handleRegisterSubmit = async (e) => {
               }
             />
 
-            {/* Gender */}
             <div style={styles.genderRow}>
               {[
                 { value: "male", label: "Nam" },
@@ -534,7 +356,6 @@ const handleRegisterSubmit = async (e) => {
               ))}
             </div>
 
-            {/* Birthday */}
             <div style={styles.birthdayRow}>
               <select
                 style={styles.select}
@@ -594,7 +415,6 @@ const handleRegisterSubmit = async (e) => {
               </select>
             </div>
 
-            {/* Checkboxes */}
             <label style={styles.checkboxLabel}>
               <input
                 type="checkbox"
@@ -636,12 +456,16 @@ const handleRegisterSubmit = async (e) => {
             </label>
 
             <button
-              style={styles.submitBtn}
-              onClick={handleRegisterSubmit}
+              style={{
+                ...styles.submitBtn,
+                ...(isSubmitting ? styles.submitBtnDisabled : {}),
+              }}
+              type="submit"
+              disabled={isSubmitting}
             >
-              Đăng ký
+              {isSubmitting ? "Đang xử lý..." : "Đăng ký"}
             </button>
-          </div>
+          </form>
         )}
       </div>
     </div>
@@ -754,6 +578,11 @@ const styles = {
     cursor: "pointer",
   },
 
+  submitBtnDisabled: {
+    opacity: 0.6,
+    cursor: "not-allowed",
+  },
+
   genderRow: {
     display: "flex",
     gap: "20px",
@@ -801,27 +630,4 @@ const styles = {
     accentColor: "#f472b6",
     marginTop: "2px",
   },
-
-  forgotBox: {
-    width: "100%",
-  },
-
-  forgotTitle: {
-    margin: 0,
-    marginBottom: "14px",
-    fontSize: "22px",
-    fontWeight: "700",
-    color: "#333",
-    textAlign: "center",
-  },
-
-  backLogin: {
-    textAlign: "center",
-    fontSize: "14px",
-    color: "#5b9cf6",
-    cursor: "pointer",
-    marginTop: "10px",
-  },
-
-  
 };

@@ -15,5 +15,9 @@
         public string Gender { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        public string? OtpCode { get; set; }
+
+        public DateTime? OtpExpired { get; set; }
     }
 }

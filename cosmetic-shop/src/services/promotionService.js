@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5114/api/Promotions";
+const API_URL = "https://localhost:7019/api/Promotions";
 
 export const getPromotions = () => {
     return axios.get(API_URL);

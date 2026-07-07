@@ -1,5 +1,1214 @@
 [
   {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminAuthController",
+    "Method": "Login",
+    "RelativePath": "api/admin-auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CosmeticShop_Backend.Models.AdminUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminAuthController",
+    "Method": "Register",
+    "RelativePath": "api/admin-auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CosmeticShop_Backend.Models.AdminUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminAttendanceController",
+    "Method": "GetAttendances",
+    "RelativePath": "api/admin/attendance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminAttendanceController",
+    "Method": "CheckIn",
+    "RelativePath": "api/admin/attendance/check-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminAttendanceController",
+    "Method": "CheckOut",
+    "RelativePath": "api/admin/attendance/check-out",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminAttendanceController",
+    "Method": "GetTodayStatus",
+    "RelativePath": "api/admin/attendance/today",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminBrandsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminBrandsController",
+    "Method": "Create",
+    "RelativePath": "api/admin/brands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LogoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BannerUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThumbnailUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FoundedYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsFeatured",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MetaTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MetaDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Products",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminBrandsController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/brands/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminBrandsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/brands/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LogoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BannerUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThumbnailUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FoundedYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsFeatured",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MetaTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MetaDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Products",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminBrandsController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/brands/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminCustomersController",
+    "Method": "GetCustomers",
+    "RelativePath": "api/admin/customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminDashboardController",
+    "Method": "GetDashboard",
+    "RelativePath": "api/admin/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminEmployeesController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/employees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminEmployeesController",
+    "Method": "Create",
+    "RelativePath": "api/admin/employees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "CosmeticShop_Backend.Models.Employee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminEmployeesController",
+    "Method": "Update",
+    "RelativePath": "api/admin/employees/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "CosmeticShop_Backend.Models.Employee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminEmployeesController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/employees/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminEmployeesController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/admin/employees/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminInventoryController",
+    "Method": "GetInventory",
+    "RelativePath": "api/admin/inventory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminInventoryController",
+    "Method": "GetLogs",
+    "RelativePath": "api/admin/inventory/logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminInventoryController",
+    "Method": "UpdateStock",
+    "RelativePath": "api/admin/inventory/products/{id}/stock",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CosmeticShop_Backend.Controllers.Admin.UpdateStockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminMessageController",
+    "Method": "GetMessages",
+    "RelativePath": "api/admin/messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminMessageController",
+    "Method": "CreateMessage",
+    "RelativePath": "api/admin/messages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "CosmeticShop_Backend.Models.AdminMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminMessageController",
+    "Method": "MarkAsRead",
+    "RelativePath": "api/admin/messages/{id}/read",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminMessageController",
+    "Method": "ReplyMessage",
+    "RelativePath": "api/admin/messages/{id}/reply",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "reply",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminMessageController",
+    "Method": "GetCustomerMessages",
+    "RelativePath": "api/admin/messages/customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "phone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminNotificationController",
+    "Method": "GetNotifications",
+    "RelativePath": "api/admin/notifications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminNotificationController",
+    "Method": "MarkOneAsRead",
+    "RelativePath": "api/admin/notifications/{type}/{id}/read",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminNotificationController",
+    "Method": "MarkAllAsRead",
+    "RelativePath": "api/admin/notifications/read-all",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminOrdersController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminOrdersController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/admin/orders/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminProductsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminProductsController",
+    "Method": "Create",
+    "RelativePath": "api/admin/products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rating",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Icon",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Products",
+        "Type": "System.Collections.Generic.List\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.LogoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.BannerUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ThumbnailUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.FoundedYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsFeatured",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Products",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ProductCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SkinType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Concern",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PriceRange",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiscountPercent",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FinalPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsInStock",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminProductsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/products/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rating",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Icon",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Products",
+        "Type": "System.Collections.Generic.List\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.LogoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.BannerUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ThumbnailUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.FoundedYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsFeatured",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Products",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ProductCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SkinType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Concern",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PriceRange",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiscountPercent",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FinalPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsInStock",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminProductsController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminReviewsController",
+    "Method": "GetReviews",
+    "RelativePath": "api/admin/reviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminReviewsController",
+    "Method": "DeleteReview",
+    "RelativePath": "api/admin/reviews/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminReviewsController",
+    "Method": "ToggleHide",
+    "RelativePath": "api/admin/reviews/{id}/hide",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminReviewsController",
+    "Method": "ReplyReview",
+    "RelativePath": "api/admin/reviews/{id}/reply",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CosmeticShop_Backend.Controllers.Admin.AdminReviewsController\u002BReplyRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.Admin.AdminReviewsController",
+    "Method": "ToggleSpam",
+    "RelativePath": "api/admin/reviews/{id}/spam",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CosmeticShop_Backend.Controllers.AuthController",
     "Method": "GetUsers",
     "RelativePath": "api/Auth",
@@ -42,6 +1251,64 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CosmeticShop_Backend.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/send-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.BeautyMatchController",
+    "Method": "GetBeautyMatch",
+    "RelativePath": "api/BeautyMatch",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skinType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "concern",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "priceRange",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CosmeticShop_Backend.Controllers.BrandsController",
     "Method": "GetBrands",
     "RelativePath": "api/Brands",
@@ -62,17 +1329,217 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CosmeticShop_Backend.Controllers.ProductsController",
-    "Method": "GetProducts",
-    "RelativePath": "api/Products",
+    "ContainingType": "CosmeticShop_Backend.Controllers.ConversationsController",
+    "Method": "CreateConversation",
+    "RelativePath": "api/conversations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CosmeticShop_Backend.Controllers.ConversationsController\u002BCreateConversationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.ConversationsController",
+    "Method": "SendMessage",
+    "RelativePath": "api/conversations/{conversationId}/messages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CosmeticShop_Backend.Controllers.ConversationsController\u002BSendMessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.ConversationsController",
+    "Method": "GetAllForAdmin",
+    "RelativePath": "api/conversations/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.ConversationsController",
+    "Method": "MarkConversationAsReadByAdmin",
+    "RelativePath": "api/conversations/admin/{conversationId}/read",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.ConversationsController",
+    "Method": "MarkAllAsReadByAdmin",
+    "RelativePath": "api/conversations/admin/read-all",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.ConversationsController",
+    "Method": "GetCustomerConversations",
+    "RelativePath": "api/conversations/customer",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoryId",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "email",
+        "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "phone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.CustomerNotificationsController",
+    "Method": "GetNotifications",
+    "RelativePath": "api/customer-notifications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "phone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.CustomerNotificationsController",
+    "Method": "MarkAsRead",
+    "RelativePath": "api/customer-notifications/{id}/read",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.CustomerNotificationsController",
+    "Method": "MarkAllAsRead",
+    "RelativePath": "api/customer-notifications/read-all",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "phone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.OrdersController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CosmeticShop_Backend.Controllers.OrdersController\u002BCreateOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.OrdersController",
+    "Method": "GetOrder",
+    "RelativePath": "api/orders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.OrdersController",
+    "Method": "CompleteOrder",
+    "RelativePath": "api/orders/{id}/complete",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.OrdersController",
+    "Method": "GetOrdersByPhone",
+    "RelativePath": "api/orders/phone/{phone}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phone",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -107,8 +1574,239 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "product",
-        "Type": "CosmeticShop_Backend.Models.Product",
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rating",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Icon",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Products",
+        "Type": "System.Collections.Generic.List\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.LogoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.BannerUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ThumbnailUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.FoundedYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsFeatured",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Products",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ProductCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SkinType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Concern",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PriceRange",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiscountPercent",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FinalPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsInStock",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CosmeticShop_Backend.Controllers.ProductsController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Products/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -123,14 +1821,224 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "product",
-        "Type": "CosmeticShop_Backend.Models.Product",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rating",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Icon",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Products",
+        "Type": "System.Collections.Generic.List\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.LogoUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.BannerUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ThumbnailUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.FoundedYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.IsFeatured",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.MetaDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.Products",
+        "Type": "System.Collections.Generic.ICollection\u00601[[CosmeticShop_Backend.Models.Product, CosmeticShop_Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Brand.ProductCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SkinType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Concern",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PriceRange",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiscountPercent",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "FinalPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsInStock",
+        "Type": "System.Boolean",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -186,9 +2094,34 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "review",
-        "Type": "CosmeticShop_Backend.Models.Review",
-        "IsRequired": true
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "rating",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "media",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
